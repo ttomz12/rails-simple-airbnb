@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap/scss/bootstrap";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  background-color: lightgrey;
+  margin: 0;
+}
+
+.margin-top-negative {
+  margin-top: -75px;
+  background-color: #F8F9F7;
+}
+
+.card {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid lightgrey;
+  padding: 10px 10px;
+  background-color: #F8F9F7;
+  width: 100%;
+  position: relative;
+  margin: .5rem 0 1rem 0;
+}
+
+.flat-info-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.flat-info-subtitle {
+  font-size: 14px;
+}
+
+.flat-info-description {
+  font-size: 12px;
+}
+
+.flat-link {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+}
+
+.flat-icon {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flat-icon-price, .flat-icon-guest {
+  display: flex;
+  align-items: center;
+}
+
+i {
+  margin-right: 7px;
+}
+
+.more-info {
+  color: blue;
+}
+
+.edit {
+  color: orange;
+}
+
+.remove {
+  color: red;
+}
+
+.map {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}

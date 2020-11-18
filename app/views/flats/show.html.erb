@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+ <nav class="navbar">
+   <p>Sample Airbnb Page</p>
+   <div class="navbar-search">
+     <a class="btn btn-primary" href="/flats/new" role="button">Add a Flat</a>
+   </div>
+</nav>
+
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80')"></div>
+
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="flash-show-card">
+        <h2><%= @flat.name %></h2>
+        <p><%= @flat.address %></p>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="flash-show-card">
+        <h3>Book this place!</h3>
+          <form action="index" method="post">
+            <input type="date" name="flat[start_date]">
+            <input type="date" name="flat[end_date]">
+            <input type="submit">
+          </form>
+        <h3>Details</h3>
+          <div class="flat-icon-price"><i class="small material-icons">attach_money</i><%= @flat.price_per_night %></div>
+          <div class="flat-icon-guest"><i class="small material-icons">people</i><%= @flat.number_of_guests %></div>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to "Back to list", flats_path %>
+</div>
+
+</html>
